@@ -1,0 +1,173 @@
+{
+	"info": {
+		"_postman_id": "5d00d177-ce13-4721-9d8a-d3a0de9b9fa7",
+		"name": "Astrotalk-HM",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14750731"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"item": [
+				{
+					"name": "Admin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"hsinghal179@gmail.com\",\n    \"password\":\"Astrotalk@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/admin",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admin"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "SignUp Staff",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"profession\":\"admin\",\n    \"name\":\"Harshit Singhal\",\n    \"email\":\"hsinghal179@gmail.com\",\n    \"phone\":\"9899880931\",\n    \"password\":\"Astrotalk@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/signup",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"signup"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login Staff",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"doctor@gmail.com\",\n    \"password\":\"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/login",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Patients",
+			"item": [
+				{
+					"name": "Admit Patient",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\":\"Rakesh\",\n    \"email\":\"rakesh@gmail.com\",\n    \"phone\":\"9999999999\",\n    \"age\":\"24\",\n    \"room\":\"D-24\",\n    \"doctor\":\"Dr. Akash\",\n    \"expenses\":\"2000\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/admitPatient",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"admitPatient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Discharge Patient",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"room\":\"D-23\",\n    \"pendingBills\": 0\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/dischargePatient",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"dischargePatient"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Patients List",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/allPatients",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"allPatients"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
